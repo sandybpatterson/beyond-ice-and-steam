@@ -1,0 +1,287 @@
+BEYOND ICE AND STEAM: Water's Secret Life
+SOURCE FILE — Chapters 2 through 6
+Author: Sandy B. Patterson
+Compiled during manuscript development, May 2026
+
+=============================================================
+CONFIRMED SOURCES
+=============================================================
+
+CHAPTER 2 — The Man Who Watched Water Think
+
+SOURCE 1 — Pollack's muscle research background
+Pollack, G.H. (1990). Muscles and Molecules: Uncovering the Principles of
+Biological Motion. Ebner & Sons, Seattle.
+STATUS: Confirmed via UW faculty page and multiple biographical sources.
+
+SOURCE 2 — Pollack's PhD and institutional affiliation
+PhD in biomedical engineering, University of Pennsylvania, 1968.
+Professor of Bioengineering, University of Washington.
+STATUS: Confirmed. URL: https://bioe.uw.edu/portfolio-items/pollack/
+
+SOURCE 3 — Muscle tissue and water
+Pollack observed that muscle tissue consists of 99 percent water molecules
+by count yet dominant theories of muscle contraction did not involve water.
+STATUS: Confirmed via multiple sources citing Pollack directly.
+
+SOURCE 4 — Original exclusion zone discovery
+Pollack, G.H. and Zheng, J.M. (2003). First observation of latex microspheres
+moving away from Nafion surface under microscope.
+STATUS: Confirmed in Elton et al. (2020) and multiple independent review papers.
+
+SOURCE 5 — Annual faculty lecture
+"Water, Energy, and Life: Fresh Views From the Water's Edge."
+University of Washington Annual Faculty Lecture, 2009. Available on YouTube.
+STATUS: Confirmed via C&EN American Chemical Society (2012).
+URL: https://cen.acs.org/articles/87/i50/Watering-Down-Science.html
+
+SOURCE 6 — Pollack's structural theory and fourth phase
+Pollack, G.H. (2013). The Fourth Phase of Water: Beyond Solid, Liquid, and
+Vapor. Ebner & Sons, Seattle.
+STATUS: Confirmed.
+
+---
+
+CHAPTER 3 — Eleven Labs Can't Be Wrong
+
+SOURCE 7 — Primary critical review paper (KEY SOURCE FOR CHAPTERS 3-6)
+Elton, D.C., Spencer, P.D., Riches, J.D., and Williams, E.D. (2020).
+"Exclusion Zone Phenomena in Water — A Critical Review of Experimental
+Findings and Theories."
+International Journal of Molecular Sciences, 21(14), 5041.
+Published: July 17, 2020.
+Full text: https://pmc.ncbi.nlm.nih.gov/articles/PMC7404113/
+ArXiv preprint: https://arxiv.org/abs/1909.06822
+STATUS: Confirmed. This paper confirms:
+  - EZ independently demonstrated by multiple groups (refs 1-11 = 11 groups)
+  - Birefringence, neutron radiography, NMR experimental confirmations
+  - Schurr diffusiophoresis theory as compelling alternative
+  - Florea et al. confirmation of Schurr's growth predictions
+  - Problems with Pollack's proposed hexagonal structure
+  - EZ reaches hundreds of microns in width
+
+SOURCE 8 — Plant xylem study
+Wang, A. and Pollack, G.H. (2024).
+"Exclusion-zone water inside and outside of plant xylem vessels."
+Scientific Reports, 14, Article 12071. Published: May 27, 2024.
+Full text: https://www.nature.com/articles/s41598-024-62983-3
+PubMed: https://pubmed.ncbi.nlm.nih.gov/38802675/
+PMC: https://pmc.ncbi.nlm.nih.gov/articles/PMC11130298/
+STATUS: Confirmed. Specific confirmed figures:
+  - Pumpkin vessels: EZ up to 240 ± 56 μm
+  - Napa cabbage, celery, asparagus: 133 ± 22 to 142 ± 20 μm
+  - EZ builds from inside edge of vessel toward center
+  - Infrared energy identified as efficient EZ builder
+  - Limitations noted: cut-out vessel samples not intact living plants
+  *** ATTRIBUTION NOTE — SEE CORRECTIONS SECTION ***
+
+SOURCE 9 — Schurr diffusiophoresis theory
+Schurr, J.M. (2013). Theory proposing EZ formation created by concentration
+gradients of OH- and H+ and salt. Called "long range chemotaxis" — a type
+of diffusiophoresis.
+STATUS: Confirmed via Elton et al. (2020). Direct Schurr (2013) paper
+citation needed for final footnotes. FLAG FOR CITATION PASS.
+
+SOURCE 10 — Florea et al. confirmation of Schurr predictions
+Florea et al. confirmed Schurr's predictions about EZ growth over time.
+STATUS: Confirmed via Elton et al. (2020). Direct Florea citation needed
+for final footnotes. FLAG FOR CITATION PASS.
+
+---
+
+CHAPTER 4 — The Excluded Zone
+
+SOURCE 11 — EZ size reaching hundreds of micrometers
+Conventional expectation: 1-2 nanometers (few water molecule layers).
+Actual EZ: hundreds of micrometers.
+STATUS: Confirmed via Elton et al. (2020) and Pollack lab research page.
+URL: https://www.pollacklab.org/research
+
+SOURCE 12 — Charge separation in EZ
+NMR, infrared, birefringence, electrical potential, and viscosity measurements
+collectively show EZ is physically distinct ordered phase.
+STATUS: Confirmed via Pollack lab research page and Elton et al. (2020).
+
+SOURCE 13 — Infrared light growing the EZ
+Infrared energy identified as efficient builder of EZ.
+Wang and Pollack (2024) confirms. Also in Pollack (2013).
+"Up to three times resting width after five minutes" — from Pollack lab.
+STATUS: Partially confirmed. Three-times figure needs direct peer reviewed
+citation. FLAG FOR CITATION PASS.
+
+SOURCE 14 — Viscosity of EZ
+EZ shows slightly higher viscosity than bulk water. Measured via falling
+ball viscometry showing gel-like consistency.
+STATUS: Confirmed in secondary sources. Direct peer reviewed citation
+needed beyond Pollack lab sources. FLAG FOR CITATION PASS.
+
+---
+
+CHAPTER 5 — Two Theories Walk Into a Lab
+
+SOURCE 15 — Daniel Elton confirmation and diffusiophoresis argument
+Elton, D.C. et al. (2020) — same as Source 7.
+Confirmed EZ phenomenon while arguing Pollack's structural explanation
+is wrong. Supports Schurr's diffusiophoresis theory.
+STATUS: Confirmed.
+
+SOURCE 16 — Problems with hexagonal structure and flow
+Elton et al. (2020) notes several problems with Pollack's proposed structure.
+A structure rigid enough to behave as described should not flow.
+STATUS: Confirmed.
+
+SOURCE 17 — Polywater comparison
+Elton et al. (2020) explicitly draws comparison to polywater, noting
+problems with Pollack's structure were noted in the 1960s when a similar
+structure was proposed for polywater.
+STATUS: Confirmed.
+
+---
+
+CHAPTER 6 — What Pollack Got Right, What He Can't Prove
+
+SOURCE 18 — H3O2 formula not in peer reviewed literature
+Formula circulates in popular accounts and lectures but formal
+crystallographic evidence has not been peer reviewed.
+STATUS: Confirmed via Elton et al. (2020).
+
+SOURCE 19 — Pollack disclaimer on laboratory website
+Note regarding companies using Pollack's image without authorization.
+STATUS: Referenced at pollacklab.org. Direct URL needs verification.
+FLAG FOR CITATION PASS.
+
+SOURCE 20 — Kourtney Kardashian $2,500 water filter
+Appeared on Poosh platform. Reported by Sydney Morning Herald.
+Documented by Timothy Schmidt, Professor of Chemistry, University
+of New South Wales:
+Schmidt, T. (2022). "Don't fall for the snake oil claims of structured
+water." The Conversation. August 5, 2022.
+STATUS: Needs direct URL confirmation. FLAG FOR CITATION PASS.
+
+SOURCE 21 — C&EN criticism of Pollack
+"Watering Down Science." Chemical and Engineering News.
+American Chemical Society. December 2012.
+URL: https://cen.acs.org/articles/87/i50/Watering-Down-Science.html
+STATUS: Confirmed.
+
+SOURCE 22 — Polywater history
+Fedyakin, N. (1961). First observations of anomalous water in glass
+capillary tubes at Technological Institute of Kostroma, Russia.
+Deryagin, B. Presented to Western scientists at Faraday Society,
+England, 1966.
+Debunked by 1973 as contaminated samples.
+Wikipedia: https://en.wikipedia.org/wiki/Polywater
+Science History Institute:
+https://www.sciencehistory.org/stories/magazine/the-rise-and-fall-of-polywater/
+STATUS: Confirmed.
+
+=============================================================
+CORRECTIONS REQUIRED BEFORE FINAL PUBLICATION
+=============================================================
+
+CORRECTION 1 — CHAPTER 3 (CRITICAL)
+Pumpkin xylem study incorrectly implied as independent confirmation.
+Wang and Pollack (2024) is a Pollack lab study — Pollack is co-author.
+It is published in Scientific Reports (Nature) which adds credibility,
+but it is NOT independent replication.
+ACTION: Revise Chapter 3 text to accurately attribute as Pollack lab
+study published in Scientific Reports. Remove implication of independence.
+
+CORRECTION 2 — CHAPTER 5 (CRITICAL)
+Researcher named "Michail Eliminates" throughout Chapter 5 is WRONG.
+Correct name: Daniel C. Elton
+Affiliation: Radiology and Imaging Sciences, National Institutes of
+Health Clinical Center, Bethesda, MD 20892, USA.
+Co-authors: Peter D. Spencer, James D. Riches, Elizabeth D. Williams.
+Paper: Elton et al. (2020) — see Source 7 above.
+ACTION: Find and replace every instance of "Michail Eliminates" with
+"Daniel Elton" in Chapter 5 before final production.
+
+CORRECTION 3 — CHAPTERS 1 AND 2 (SIGNIFICANT)
+"The physics of suction only works up to about thirty feet" is
+partially misleading.
+Facts:
+  - Simple atmospheric suction limit: approximately 10 meters / 33 feet.
+    This part is accurate.
+  - Mainstream explanation for tall trees is Cohesion-Tension (CT) theory
+    — transpiration pull, cohesion between water molecules, negative
+    pressure. This can theoretically reach over 400 feet.
+  - Tallest known redwood: 379 feet.
+  - CT theory is established and does not require exclusion zone.
+ACTION: Revise Chapters 1 and 2 to acknowledge CT theory as the
+mainstream explanation. Frame exclusion zone as a possible additional
+mechanism being explored, not as filling an unexplained gap. Chapter 8
+(The Engine in the Tree) must handle this carefully and fully.
+
+CORRECTION 4 — CHAPTERS 1 AND 4 (SIGNIFICANT)
+Joint lubrication claim presented as if confirmed by exclusion zone
+research. This is Pollack's hypothesis — not independently confirmed
+by clinical or orthopedic research.
+ACTION: Reframe in both chapters as "a proposed explanation" rather
+than confirmed fact. Add qualifier: "Pollack's lab has proposed..."
+
+CORRECTION 5 — CHAPTER 4
+"Up to three times resting width after five minutes" infrared claim
+needs peer reviewed citation beyond Pollack lab sources.
+ACTION: Find and cite direct peer reviewed paper for this figure
+before final HTML production. FLAG FOR CITATION PASS.
+
+CORRECTION 6 — CHAPTER 5
+"Nineteen or more known phases of water" — exact number varies by
+source (some say 15, some 17, some over 20).
+ACTION: Change to "more than a dozen confirmed phases" throughout.
+Safer, accurate, not tied to a specific contested number.
+
+CORRECTION 7 — CHAPTER 2
+"A mature oak can pull three hundred liters of water from the soil
+on a hot summer day" — plausible but uncited.
+ACTION: Verify and cite. Or adjust to "hundreds of liters" without
+specific figure if verification fails.
+
+CORRECTION 8 — CHAPTER 6
+Pollack's active participation in wellness community understated.
+He appeared on Mercola's platform. Lectured at wellness conferences.
+Embraced wellness audiences before eventually posting disclaimer.
+ACTION: Revise relevant paragraph in Chapter 6 to reflect his
+active participation rather than passive association.
+
+CORRECTION 9 — CHAPTERS 3 AND 6 (POLYWATER)
+Polywater attributed only to "a Soviet scientist in the 1960s."
+Full accurate account: Fedyakin first observed it in 1961 in Kostroma.
+Deryagin — more senior and famous scientist — took over and presented
+it to the West at Faraday Society, England, 1966.
+Debunked definitively by 1973.
+ACTION: Name both Fedyakin and Deryagin accurately in both chapters.
+
+=============================================================
+ITEMS FLAGGED FOR DEDICATED CITATION PASS
+=============================================================
+
+FLAG 1: Direct Schurr (2013) paper citation needed — Chapter 5.
+FLAG 2: Direct Florea et al. citation needed — Chapter 5.
+FLAG 3: Infrared three-times figure peer reviewed citation — Chapter 4.
+FLAG 4: EZ viscosity peer reviewed citation — Chapter 4.
+FLAG 5: Pollack disclaimer direct URL verification — Chapter 6.
+FLAG 6: Schmidt / Kardashian Conversation article direct URL — Chapter 6.
+FLAG 7: Oak 300 liters per day verified citation — Chapter 2.
+
+=============================================================
+STATUS SUMMARY
+=============================================================
+
+Chapters written: 1 through 6
+Chapters approved pending corrections: 1 through 6
+Critical corrections outstanding: 2 (pumpkin attribution, Elton name)
+Significant corrections outstanding: 2 (tree suction, joint lubrication)
+Precision corrections outstanding: 5
+Citation pass items outstanding: 7
+
+Next chapter: Chapter 7 — The Ghost of Polywater
+Key note for Chapter 7: Fedyakin and Deryagin both named accurately.
+Polywater debunked by 1973 not "early 1970s."
+Connection to EZ: Elton et al. (2020) draws explicit parallel.
+
+=============================================================
+END OF SOURCE FILE
+Last updated: May 2026
+=============================================================

@@ -1,0 +1,198 @@
+BEYOND ICE AND STEAM: Water's Secret Life
+CORRECTIONS TRACKING FILE
+Author: Sandy B. Patterson
+Last updated: May 2026
+
+=============================================================
+STATUS KEY
+=============================================================
+[ ] = Not yet actioned
+[x] = Completed
+[~] = Partially complete / noted for later
+
+=============================================================
+ACTIVE CORRECTIONS
+=============================================================
+
+CORRECTION A — Chapter 7 — Feynman quote and attribution
+Priority: Medium
+Status: [ ]
+
+Current text paraphrases Feynman's animal argument and
+incorrectly attributes the broader thermodynamics point
+to Feynman specifically.
+
+Required changes:
+1. Replace paraphrase with exact Feynman quote:
+   "There is no such thing as polywater because if there
+   were, there would also be an animal which didn't need
+   to eat food. It would just drink water and excrete
+   polywater."
+2. Attribute the thermodynamics point (Earth's oceans
+   should already be polywater) as a general scientific
+   observation — NOT specifically Feynman's.
+3. Frame Feynman's contribution as a spoken remark,
+   not a published paper.
+
+Replacement paragraph:
+"The broader scientific community noted a thermodynamic
+problem with polywater from early on. If it were genuinely
+more stable than ordinary water, all of Earth's water
+should have converted to it long ago. The oceans should
+be solid. Life should be impossible.
+
+Feynman put it more elegantly. 'There is no such thing
+as polywater,' he said, 'because if there were, there
+would also be an animal which didn't need to eat food.
+It would just drink water and excrete polywater.' No
+such animal existed. It was a quiet devastating
+observation from someone who never published a word
+on the subject."
+
+Source confirmed: Wikipedia Polywater article, citing
+Bauer (note 15). Quote circulates widely across
+multiple reliable sources.
+
+---
+
+CORRECTION B — Chapters 1 and 2 — Tree suction claim
+Priority: High
+Status: [ ]
+
+Current text implies nobody has fully explained how
+trees move water against gravity. This is misleading.
+
+Required changes:
+1. Chapter 1 — revise to acknowledge Cohesion-Tension
+   theory as the established mainstream explanation.
+2. Chapter 2 — same revision.
+3. Frame exclusion zone as a possible additional
+   mechanism being researched, not a gap-filler for
+   an unexplained mystery.
+
+Correct framing:
+"The mainstream explanation — Cohesion-Tension theory,
+proposed by Dixon and Joly in 1894 — describes how
+transpiration pull and the cohesive properties of water
+work together to move water upward through xylem vessels.
+It is widely accepted and well supported by data. What
+the exclusion zone adds — or may add — to that picture
+is an active area of research."
+
+Source: Dixon and Joly (1894). Confirmed via multiple
+sources including Angeles et al. (2004) letter in
+New Phytologist signed by 45 scientists from seven
+countries stating CT theory is "the only theory
+consistent with the preponderance of data on water
+transport in plants."
+
+NOTE: Chapter 8 (The Engine in the Tree) must handle
+this carefully and fully when drafted.
+
+---
+
+CORRECTION C — Chapter 7 — Deryagin's age at retraction
+Priority: Medium
+Status: [ ]
+
+Current text states Deryagin was eighty years old when
+he published the retraction in Nature in August 1973.
+
+Correct age: Deryagin was born in 1902. In 1973 he
+was 71 years old — not eighty.
+
+Required change:
+Find "eighty years old" in Chapter 7 and replace with
+"seventy-one years old" or simply remove the specific
+age reference entirely if preferred.
+
+---
+
+CORRECTION D — Chapter 7 — 500 papers vs 500 publications
+Priority: Low
+Status: [ ]
+
+Current text says "over 500 papers" throughout Chapter 7.
+
+Correct figure: Over 500 total publications — including
+peer reviewed papers, popular articles, comments, and
+reviews. Not all were peer reviewed scientific papers.
+
+Source: From 1962 to 1974 in the US alone there were
+115 research publications and 112 popular articles,
+comments and reviews, and 285 polywater-related
+publications in other countries. Total approximately 512.
+
+Required change:
+Replace "papers" with "publications" wherever the 500
+figure is cited in Chapter 7.
+
+=============================================================
+COMPLETED CORRECTIONS
+=============================================================
+
+None yet.
+
+=============================================================
+EDITORIAL NOTES
+=============================================================
+
+EDIT E — Chapter 8 — Reduce soda bubble references
+Chapter 8 currently references soda bubbles in the
+cavitation section. Now that Chapter 9 covers bubble
+nucleation in full detail, Chapter 8's soda bubble
+references feel redundant and slightly premature.
+ACTION: Edit Chapter 8 to reduce or remove soda bubble
+references in the cavitation section. Let Chapter 9
+own that territory completely. Update docx after edit.
+
+=============================================================
+DEFERRED / NON-CRITICAL NOTES
+=============================================================
+
+NOTE 1 — Chapter 7 — Contamination complexity
+Rousseau's 1971 paper correctly identifies sodium lactate
+from sweat as the primary culprit. Later analysis found
+additional contaminants — silica, phospholipids, multiple
+salts. Our text is accurate for Rousseau's specific
+finding. Optional one-sentence addition noting broader
+contamination found in subsequent analysis. Not an error.
+Decision: Leave as is unless Chapter 7 is revised anyway.
+
+NOTE 2 — Chapter 7 — Rousseau's pathological science usage
+Some sources note Rousseau's application of Langmuir's
+"pathological science" term to polywater was technically
+an incorrect usage of that term. Our text presents it
+straightforwardly. Minor precision issue. Not worth
+correcting — our usage is defensible.
+
+NOTE 3 — Feynman citation venue
+Feynman's animal remark is confirmed and widely cited
+but original venue (lecture, informal comment) not
+pinned down. Wikipedia cites Bauer (note 15) as source.
+Not a publication. Flag for citation pass before
+final production.
+
+NOTE 4 — Chapter 4 — Joint lubrication claim
+Framed as confirmed fact in Chapter 4. Should be
+framed as Pollack's proposed hypothesis not confirmed
+by independent clinical research. Low priority —
+will be addressed in full revision pass.
+
+NOTE 5 — Chapter 2 — Oak 300 liters per day
+Plausible but uncited. Needs verified citation or
+change to "hundreds of liters" without specific figure.
+Flag for citation pass before final production.
+
+=============================================================
+CHAPTERS REQUIRING DOCX UPDATE AFTER CORRECTIONS
+=============================================================
+
+Chapter 1 — needs Correction B (tree suction)
+Chapter 2 — needs Correction B (tree suction)
+Chapter 7 — needs Corrections A, C, D
+
+=============================================================
+END OF CORRECTIONS FILE
+Last updated: May 2026
+=============================================================
