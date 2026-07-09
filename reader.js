@@ -24,6 +24,105 @@
   //   flag:       emoji flag for the language button
   //   speechLang: the BCP-47 tag used to filter Web Speech API voices
   //               (e.g. 'en-US' will prefer voices whose lang starts with 'en')
+  // Apple novelty/special-effect voices built into macOS and iOS.
+  // These appear in getVoices() but are not useful for reading — hide them.
+  const NOVELTY_VOICES = new Set([
+    'albert', 'bad news', 'bahh', 'bells', 'boing', 'bubbles',
+    'cellos', 'fred', 'good news', 'jester', 'junior', 'kathy',
+    'organ', 'superstar', 'whisper', 'ralph', 'wobble', 'zarvox'
+  ]);
+
+  function isIOS() {
+    return /iPhone|iPad|iPod/.test(navigator.userAgent);
+  }
+
+  // Returns true if the user has any non-novelty, non-Samantha English voice installed.
+  // Samantha is the only pre-installed iOS English voice — anything else means
+  // the user has downloaded something better.
+  function hasGoodVoice() {
+    const usableEnglish = allVoices.filter(v =>
+      !NOVELTY_VOICES.has(v.name.toLowerCase()) &&
+      v.lang.toLowerCase().startsWith('en')
+    );
+    return usableEnglish.some(v => {
+      const n = v.name.toLowerCase();
+      return n !== 'samantha'; // anything other than Samantha counts
+    });
+  }
+
+  function checkVoiceQuality() {
+    if (!isIOS()) return;
+    if (hasGoodVoice()) return;
+    if (localStorage.getItem('sbp-voice-hint-v2')) return;
+    setTimeout(showVoicePrompt, 900);
+  }
+
+  function showVoicePrompt() {
+    if (document.getElementById('sbp-voice-prompt')) return;
+    const reader = document.getElementById('sbp-reader');
+    if (!reader) return;
+
+    const el = document.createElement('div');
+    el.id = 'sbp-voice-prompt';
+    el.className = 'sbp-voice-prompt';
+    el.innerHTML = `
+      <span class="sbp-vp-text">A much better voice is available for your iPhone — free.</span>
+      <button class="sbp-vp-btn sbp-vp-yes" id="sbp-vp-yes">Set up now</button>
+      <button class="sbp-vp-btn sbp-vp-no" id="sbp-vp-no">✕</button>
+    `;
+    reader.appendChild(el);
+
+    document.getElementById('sbp-vp-yes').addEventListener('click', () => {
+      el.remove();
+      showVoiceInstructions();
+    });
+    // ✕ just hides for this session — does NOT set localStorage
+    document.getElementById('sbp-vp-no').addEventListener('click', () => {
+      el.remove();
+    });
+  }
+
+  function showVoiceInstructions() {
+    const overlay = document.createElement('div');
+    overlay.id = 'sbp-voice-overlay';
+    overlay.className = 'sbp-voice-overlay';
+    overlay.innerHTML = `
+      <div class="sbp-voice-modal">
+        <button class="sbp-voice-close" id="sbp-voice-close">✕</button>
+        <p class="sbp-vm-eyebrow">iPhone Voice Setup</p>
+        <h2 class="sbp-vm-title">Download a natural&#8209;sounding voice</h2>
+        <ol class="sbp-vm-steps">
+          <li>Open the <strong>Settings</strong> app ⚙️</li>
+          <li>Tap <strong>Accessibility</strong></li>
+          <li>Tap <strong>Vision</strong> → <strong>Read &amp; Speak</strong><br><span class="sbp-vm-alt">On newer iOS: <strong>Spoken Content</strong></span></li>
+          <li>Tap <strong>Voices</strong> → <strong>English</strong></li>
+          <li>Find a voice with <em>Enhanced</em> — tap ⬇ to download if needed</li>
+          <li>Tap the voice <strong>name</strong> to set it as your default</li>
+        </ol>
+        <p class="sbp-vm-note">iPhone ignores voice changes from web pages and always uses your iOS default. Setting it as default here is what actually changes what you hear. Can't find Voices? Search <strong>"voices"</strong> in the Settings search bar.</p>
+        <label class="sbp-vm-toggle-row">
+          <span class="sbp-vm-toggle-label">Don't remind me again</span>
+          <span class="sbp-toggle">
+            <input type="checkbox" id="sbp-vm-noremind">
+            <span class="sbp-toggle-track"><span class="sbp-toggle-thumb"></span></span>
+          </span>
+        </label>
+        <button class="sbp-vm-done" id="sbp-voice-done">Got it</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    function close() {
+      if (document.getElementById('sbp-vm-noremind')?.checked) {
+        localStorage.setItem('sbp-voice-hint-v2', '1');
+      }
+      overlay.remove();
+    }
+    document.getElementById('sbp-voice-close').addEventListener('click', close);
+    document.getElementById('sbp-voice-done').addEventListener('click', close);
+    overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+  }
+
   const LANGUAGES = [
     { code: 'en', label: 'English',    flag: '🇺🇸', speechLang: 'en-US' },
     { code: 'es', label: 'Español',    flag: '🇪🇸', speechLang: 'es-ES' },
@@ -161,6 +260,7 @@
   function loadVoices() {
     allVoices = synth.getVoices();
     populateVoiceSelect();
+    checkVoiceQuality();
   }
 
   // Returns voices sorted by best fit for the given language tag.
@@ -174,16 +274,17 @@
   // fallback that browsers pick when nothing else matches.
   function getBestVoicesForLang(speechLang) {
     const langPrefix = speechLang.split('-')[0].toLowerCase();
+    const usable = allVoices.filter(v => !NOVELTY_VOICES.has(v.name.toLowerCase()));
 
-    let matches = allVoices.filter(v =>
+    let matches = usable.filter(v =>
       v.lang.toLowerCase() === speechLang.toLowerCase()
     );
     if (!matches.length) {
-      matches = allVoices.filter(v =>
+      matches = usable.filter(v =>
         v.lang.toLowerCase().startsWith(langPrefix)
       );
     }
-    if (!matches.length) matches = allVoices;
+    if (!matches.length) matches = usable;
 
     return matches.sort((a, b) => {
       if (a.default && !b.default) return 1;  // push system default down
@@ -198,23 +299,62 @@
   // Fills the voice <select> dropdown with up to 12 voices for the current language.
   // Brand prefixes (Microsoft, Google, Apple) are stripped from display names
   // because they add noise without being useful to the reader.
+  // On iOS, getVoices() returns many names but only two actually work:
+  //   1. Samantha — Apple's built-in voice, always addressable directly
+  //   2. The system default — whatever the user has set in iOS Settings;
+  //      all other voice names silently route here
+  // We find these two real slots and discard everything else.
+  function getIOSRealVoices() {
+    const samantha = allVoices.find(v => v.name.toLowerCase() === 'samantha');
+    const systemDefault = allVoices.find(v => v.default) ||
+                          allVoices.find(v => !NOVELTY_VOICES.has(v.name.toLowerCase()) &&
+                                              v.name.toLowerCase() !== 'samantha' &&
+                                              v.lang.toLowerCase().startsWith('en'));
+    const real = [];
+    if (systemDefault) real.push(systemDefault);
+    if (samantha && samantha !== systemDefault) real.push(samantha);
+    return real;
+  }
+
   function populateVoiceSelect() {
     const select = document.getElementById('sbp-voice-select');
     if (!select) return;
 
+    if (isIOS()) {
+      // iOS only: build the two-slot picker
+      const real = getIOSRealVoices();
+      select.innerHTML = '';
+      real.forEach((v, i) => {
+        const opt = document.createElement('option');
+        opt.value = i;
+        const label = v.name.replace(/Microsoft|Google|Apple/g, '').trim();
+        opt.textContent = i === 0 && real.length > 1 ? `${label} (default)` : label;
+        select.appendChild(opt);
+      });
+
+      if (!hasGoodVoice()) {
+        const hint = document.createElement('option');
+        hint.value = '__setup__';
+        hint.textContent = '⬇ Download a better voice';
+        select.appendChild(hint);
+      }
+
+      selectedVoice = real[0] || null;
+      return;
+    }
+
+    // Desktop: full voice picker
     const lang = LANGUAGES.find(l => l.code === currentLang) || LANGUAGES[0];
     const voices = getBestVoicesForLang(lang.speechLang);
-
     select.innerHTML = '';
-    voices.slice(0, 12).forEach((v, i) => {
+    voices.forEach((v, i) => {
       const opt = document.createElement('option');
-      opt.value = i;                                                     // index into the sorted voices array
+      opt.value = i;
       opt.textContent = v.name.replace(/Microsoft|Google|Apple/g, '').trim();
-      opt.dataset.voiceUri = v.voiceURI;                                 // stored for reference, not actively used
+      opt.dataset.voiceUri = v.voiceURI;
       select.appendChild(opt);
     });
-
-    selectedVoice = voices[0] || null; // auto-select the best available voice
+    selectedVoice = voices[0] || null;
   }
 
 
@@ -828,6 +968,190 @@
         color: #c8b89a;
       }
 
+      /* ── Voice upgrade prompt (iOS only) ── */
+      .sbp-voice-prompt {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        padding: 0.5rem 0 0.1rem;
+        border-top: 1px solid #1a1a1a;
+        margin-top: 0.25rem;
+      }
+      .sbp-vp-text {
+        font-size: 0.72rem;
+        color: #888;
+        flex: 1;
+        min-width: 180px;
+      }
+      .sbp-vp-btn {
+        font-family: inherit;
+        font-size: 0.68rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border-radius: 999px;
+        padding: 5px 14px;
+        cursor: pointer;
+        transition: all 0.15s;
+        white-space: nowrap;
+      }
+      .sbp-vp-yes {
+        background: #c8b89a;
+        color: #0e0e0e;
+        border: 1px solid #c8b89a;
+      }
+      .sbp-vp-yes:hover { background: #ddd0b8; border-color: #ddd0b8; }
+      .sbp-vp-no {
+        background: none;
+        color: #555;
+        border: 1px solid #2a2a2a;
+      }
+      .sbp-vp-no:hover { color: #888; border-color: #444; }
+
+      /* ── Voice setup modal ── */
+      .sbp-voice-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.78);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        backdrop-filter: blur(4px);
+      }
+      .sbp-voice-modal {
+        background: #111;
+        border: 1px solid #2a2a2a;
+        border-radius: 12px;
+        padding: 36px 32px 32px;
+        max-width: 400px;
+        width: 100%;
+        position: relative;
+      }
+      .sbp-voice-close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background: none;
+        border: none;
+        color: #555;
+        font-size: 1rem;
+        cursor: pointer;
+        padding: 4px 8px;
+        transition: color 0.15s;
+        line-height: 1;
+      }
+      .sbp-voice-close:hover { color: #c8b89a; }
+      .sbp-vm-eyebrow {
+        font-family: 'Courier New', monospace;
+        font-size: 0.65rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #c8b89a;
+        margin-bottom: 10px;
+      }
+      .sbp-vm-title {
+        font-family: Georgia, serif;
+        font-size: 1.25rem;
+        color: #e8e8e8;
+        margin-bottom: 24px;
+        line-height: 1.3;
+      }
+      .sbp-vm-steps {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+      .sbp-vm-steps li {
+        font-family: Georgia, serif;
+        font-size: 0.88rem;
+        color: #888;
+        line-height: 1.75;
+      }
+      .sbp-vm-steps li strong { color: #e0d8cc; font-weight: 600; }
+      .sbp-vm-steps li em { color: #c8b89a; font-style: normal; }
+      .sbp-vm-alt { font-size: 0.78rem; color: #555; font-style: italic; }
+      .sbp-vm-note {
+        font-size: 0.78rem;
+        color: #555;
+        font-style: italic;
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+      .sbp-ios-voice-btn {
+        background: none;
+        border: 1px solid #2a2a2a;
+        color: #c8b89a;
+        font-family: inherit;
+        font-size: 0.72rem;
+        padding: 0.3rem 0.6rem;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: border-color 0.15s;
+        white-space: nowrap;
+      }
+      .sbp-ios-voice-btn:hover { border-color: #c8b89a; }
+
+      .sbp-vm-toggle-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .sbp-vm-toggle-label {
+        font-size: 0.8rem;
+        color: #666;
+      }
+      .sbp-toggle { position: relative; display: inline-block; }
+      .sbp-toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+      .sbp-toggle-track {
+        display: block;
+        width: 40px;
+        height: 22px;
+        background: #2a2a2a;
+        border-radius: 999px;
+        border: 1px solid #3a3a3a;
+        transition: background 0.2s;
+        position: relative;
+      }
+      .sbp-toggle input:checked + .sbp-toggle-track {
+        background: #c8b89a;
+        border-color: #c8b89a;
+      }
+      .sbp-toggle-thumb {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 16px;
+        height: 16px;
+        background: #888;
+        border-radius: 50%;
+        transition: left 0.2s, background 0.2s;
+      }
+      .sbp-toggle input:checked + .sbp-toggle-track .sbp-toggle-thumb {
+        left: 20px;
+        background: #0e0e0e;
+      }
+      .sbp-vm-done {
+        font-family: 'Courier New', monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: #c8b89a;
+        color: #0e0e0e;
+        border: none;
+        border-radius: 999px;
+        padding: 10px 28px;
+        cursor: pointer;
+        transition: background 0.15s;
+        display: block;
+        width: 100%;
+      }
+      .sbp-vm-done:hover { background: #ddd0b8; }
+
       /* Narrow screens: controls wrap, selects go full-width on second row. */
       @media (max-width: 600px) {
         .sbp-reader {
@@ -943,6 +1267,7 @@
   function bindEvents() {
     document.getElementById('sbp-play-btn')?.addEventListener('click', togglePlayPause);
     document.getElementById('sbp-stop-btn')?.addEventListener('click', stopPlayback);
+    document.getElementById('sbp-ios-voice-btn')?.addEventListener('click', showVoiceInstructions);
 
     // Scrubber: click on track, or drag the thumb, to seek.
     const track = document.getElementById('sbp-progress-track');
@@ -1015,9 +1340,14 @@
 
     // Voice dropdown: same pattern — rebuild and restart from the current position.
     document.getElementById('sbp-voice-select')?.addEventListener('change', (e) => {
-      const voices = getBestVoicesForLang(
-        LANGUAGES.find(l => l.code === currentLang)?.speechLang || 'en-US'
-      );
+      if (e.target.value.startsWith('__setup__')) {
+        e.target.value = '0';
+        showVoiceInstructions();
+        return;
+      }
+      const voices = isIOS()
+        ? getIOSRealVoices()
+        : getBestVoicesForLang(LANGUAGES.find(l => l.code === currentLang)?.speechLang || 'en-US');
       selectedVoice = voices[parseInt(e.target.value)] || null;
       if (isPlaying || isPaused) {
         const idx = currentIndex;
@@ -1099,7 +1429,8 @@
     bindEvents();
     loadVoices();
 
-    setTimeout(loadVoices, 500); // second call catches async voice loading
+    setTimeout(loadVoices, 500);   // second call for browsers that load voices async
+    setTimeout(loadVoices, 2000);  // third call for iOS which can be slower after install
 
     // If we arrived here via autoplay navigation, activate the toggle and auto-start.
     // Delay 650ms so voices have time to load before buildUtterances() runs.
