@@ -2,7 +2,7 @@
 ## Project Context for Claude Code
 
 **Author:** Sandy B. Patterson (he/they pronouns)
-**Status:** In progress — 13 of 16 chapters written
+**Status:** In progress — 15 of 16 chapters written (only Ch16 remains)
 **Format:** Popular science nonfiction
 **Comparable titles:** The Disappearing Spoon, The Immortal Life of Henrietta Lacks
 **Substack:** The Original Bug (@sandybpatterson)
@@ -59,8 +59,8 @@ The book is not a wellness book. It is not a takedown of Pollack. It is an hones
 
 ### SECTION VI: WHAT THIS CHANGES
 - **Chapter 14** — The Memory of Water ✅ WRITTEN (chapters/ch14.md) — fact-checked 2026-08-01, all major claims verified accurate (Benveniste's June 30 1988 Nature paper, the Maddox/Randi/Stewart investigation, the "codebook taped to the ceiling" detail, Montagnier's 2010-2011 papers and 2022 death, Hahnemann's 1796 founding of homeopathy, NHS's 2017 and France's 2021 funding phase-outs, the 1938 FDCA homeopathic exemption)
-- **Chapter 15** — The Open Question ⏳ NOT YET WRITTEN
-- **Chapter 16** — The Water That Was Always There ⏳ NOT YET WRITTEN
+- **Chapter 15** — The Open Question ✅ WRITTEN (chapters/ch15.md) — drafted 2026-08-01. Pivot chapter into Section VI. Returns to the structural-vs-diffusiophoresis argument from Ch5 but pushes FORWARD (does not re-litigate Ch5): why the deciding measurement is hard (water reorients in ~1ps, the EZ is destroyed by crystallography/freezing/vacuum prep, and the extraordinary claim is about order PROPAGATING hundreds of micrometers/hundreds of thousands of molecular layers, not just the first surface layer everyone agrees is different); the real interfacial-water toolkit now maturing (sum-frequency generation spectroscopy = surface-only, bulk-silent; plus neutron scattering, NMR, terahertz, ultrafast/2D-IR); both possible verdicts framed as exciting (Pollack right = uncatalogued phase reaching into cell biology; diffusiophoresis right = ordinary physics doing something magnificent at unexpected scale — explicitly NOT the boring outcome); the reader-as-insider emotional payoff; open question as invitation not failure. Science kept honest — NO invented studies, named researchers-with-results, or fake groups; "may come within the decade" hedged exactly as Ch5 hedged it. No superscript citations (this book's .md files don't use them), so no notes-file update needed.
+- **Chapter 16** — The Water That Was Always There ⏳ NOT YET WRITTEN (Ch15's final lines deliberately hand off to it: "Let's go back to the glass on the table.")
 
 ---
 
