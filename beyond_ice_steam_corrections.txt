@@ -16,7 +16,10 @@ ACTIVE CORRECTIONS
 
 CORRECTION A — Chapter 7 — Feynman quote and attribution
 Priority: Medium
-Status: [ ]
+Status: [x] Completed 2026-08-01. Quote verified independently
+(matches exactly). Thermodynamics point reframed as general
+scientific observation; Feynman's contribution isolated as the
+exact quote, framed as a spoken remark.
 
 Current text paraphrases Feynman's animal argument and
 incorrectly attributes the broader thermodynamics point
@@ -57,7 +60,11 @@ multiple reliable sources.
 
 CORRECTION B — Chapters 1 and 2 — Tree suction claim
 Priority: High
-Status: [ ]
+Status: [x] Completed 2026-08-01. Fixed in Chapter 1 (verified
+Cohesion-Tension theory is genuinely the accepted mainstream
+explanation before editing). Chapter 2 currently contains no
+tree/xylem content at all — that part of the correction is moot,
+content may have moved chapters since this file was written.
 
 Current text implies nobody has fully explained how
 trees move water against gravity. This is misleading.
@@ -93,7 +100,9 @@ this carefully and fully when drafted.
 
 CORRECTION C — Chapter 7 — Deryagin's age at retraction
 Priority: Medium
-Status: [ ]
+Status: [x] Completed 2026-08-01. Independently verified Deryagin's
+birth date (Aug 9, 1902) — confirmed 71 in August 1973, not 80.
+Fixed.
 
 Current text states Deryagin was eighty years old when
 he published the retraction in Nature in August 1973.
@@ -110,7 +119,12 @@ age reference entirely if preferred.
 
 CORRECTION D — Chapter 7 — 500 papers vs 500 publications
 Priority: Low
-Status: [ ]
+Status: [x] Completed 2026-08-01. Confirmed a real bibliometric
+source exists (Ackermann, Scientometrics 63(2), 2005) analyzing
+polywater publications 1962-1974; multiple sources describe the
+~500 figure as total publications, not specifically peer-reviewed
+papers. Fixed all four instances in Chapter 7 tied to the 500
+figure, including removing the specific "peer reviewed" claim.
 
 Current text says "over 500 papers" throughout Chapter 7.
 
@@ -131,7 +145,11 @@ figure is cited in Chapter 7.
 COMPLETED CORRECTIONS
 =============================================================
 
-None yet.
+Corrections A, B, C, and D completed 2026-08-01. Each was
+independently re-verified against outside sources before being
+applied (not just trusted from this file) — see individual
+correction entries above for verification notes. Chapters 1 and
+7 were edited directly in chapters/ch01.md and chapters/ch07.md.
 
 =============================================================
 EDITORIAL NOTES
@@ -180,9 +198,11 @@ by independent clinical research. Low priority —
 will be addressed in full revision pass.
 
 NOTE 5 — Chapter 2 — Oak 300 liters per day
-Plausible but uncited. Needs verified citation or
-change to "hundreds of liters" without specific figure.
-Flag for citation pass before final production.
+RESOLVED 2026-08-01: Chapter 2 no longer contains any tree/oak
+content — it appears to have moved to Chapter 1 at some point
+since this file was written. Chapter 1's current text already
+uses "hundreds of liters" (the exact fix this note recommended)
+rather than a specific uncited figure. No action needed.
 
 =============================================================
 CHAPTERS REQUIRING DOCX UPDATE AFTER CORRECTIONS

@@ -166,23 +166,19 @@ The book is not a wellness book. It is not a takedown of Pollack. It is an hones
 
 ## Corrections Outstanding
 
-See `beyond_ice_steam_corrections.txt` for full detail. Key items:
-
-**CORRECTION A — Chapter 7 — Feynman quote**
-Replace paraphrase with exact quote: "There is no such thing as polywater because if there were, there would also be an animal which didn't need to eat food. It would just drink water and excrete polywater."
-Separate thermodynamics point (general scientific observation) from Feynman's specific animal argument.
-
-**CORRECTION B — Chapters 1 and 2 — Tree suction claim**
-Current text implies nobody explained how trees drink. WRONG. Cohesion-Tension theory (Dixon and Joly 1894/1895) is established mainstream explanation. Revise to acknowledge CT theory and frame exclusion zone as possible additional mechanism.
-
-**CORRECTION C — Chapter 7 — Deryagin's age**
-We said eighty. He was 71 in 1973.
-
-**CORRECTION D — Chapter 7 — 500 papers vs publications**
-Change "papers" to "publications" — the 500 figure includes popular articles not just peer reviewed papers.
+Corrections A, B, C, and D completed 2026-08-01 (each independently
+re-verified against outside sources before being applied — see
+`beyond_ice_steam_corrections.txt` for verification notes and
+`chapters/ch01.md` / `chapters/ch07.md` for the actual edits). Only
+EDIT E remains open:
 
 **EDIT E — Chapter 8 — Reduce soda bubble references**
-Chapter 8 mentions soda bubbles in cavitation section. Now Chapter 9 covers this fully. Reduce/remove from Chapter 8 to avoid redundancy.
+Chapter 8 mentions soda bubbles in cavitation section. Now Chapter 9 covers this fully. Reduce/remove from Chapter 8 to avoid redundancy. Not yet actioned.
+
+Note: the `.docx` files in `chapters/` are archival only — `chapter.html`
+fetches the `.md` files directly at runtime (same architecture as the
+`original-bug-book` site), so edits to the `.md` files are already live
+without any `.docx` regeneration step.
 
 ---
 
