@@ -156,6 +156,14 @@ EDITORIAL NOTES
 =============================================================
 
 EDIT E — Chapter 8 — Reduce soda bubble references
+RESOLVED 2026-08-01: Read the full current Chapter 8 — it contains
+zero soda/carbonation/bubble references of any kind. Its cavitation
+section is entirely about tree xylem, not beverages. This content
+must have already been removed in an earlier revision (Chapter 8's
+current draft is complete and already handles the Cohesion-Tension
+theory framing correctly). Confirmed Chapter 9 fully owns the
+soda-bubble territory (32 references) as intended. No action needed.
+[Original note preserved below for reference:]
 Chapter 8 currently references soda bubbles in the
 cavitation section. Now that Chapter 9 covers bubble
 nucleation in full detail, Chapter 8's soda bubble
