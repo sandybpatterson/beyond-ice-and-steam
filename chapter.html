@@ -107,12 +107,13 @@
     #content strong { color: #f0f0f0; font-weight: 600; }
     #content em { font-style: italic; color: #e0e0e0; }
 
-    /* Section divider \* \* \* */
-    #content p:has(> em:only-child) {
+    /* Section break — centered gold dots (tagged via JS from a "* * *" paragraph) */
+    #content p.section-break {
       text-align: center;
       color: #B8A98A;
-      letter-spacing: 0.3em;
-      margin: 2.5em 0;
+      letter-spacing: 0.4em;
+      font-style: normal;
+      margin: 2.6em 0;
     }
 
     #content > p:last-child {
@@ -244,6 +245,16 @@
           const el = document.getElementById('content');
           el.innerHTML = marked.parse(md);
           el.style.display = 'block';
+
+          // Only true "* * *" divider paragraphs become centered gold section breaks.
+          // (Prevents ordinary paragraphs that contain a single italic phrase from
+          // being mis-styled as giant pull quotes.)
+          el.querySelectorAll('p').forEach(p => {
+            if (p.textContent.trim().replace(/\s+/g, ' ') === '* * *') {
+              p.classList.add('section-break');
+              p.textContent = '· · ·';
+            }
+          });
 
           const readerScript = document.createElement('script');
           readerScript.src = 'reader.js';
