@@ -58,7 +58,7 @@ The book is not a wellness book. It is not a takedown of Pollack. It is an hones
 - **Chapter 13** — $2,500 for a Glass of Water ✅ DOCX COMPLETE
 
 ### SECTION VI: WHAT THIS CHANGES
-- **Chapter 14** — The Memory of Water ⏳ NOT YET WRITTEN
+- **Chapter 14** — The Memory of Water ✅ WRITTEN (chapters/ch14.md) — fact-checked 2026-08-01, all major claims verified accurate (Benveniste's June 30 1988 Nature paper, the Maddox/Randi/Stewart investigation, the "codebook taped to the ceiling" detail, Montagnier's 2010-2011 papers and 2022 death, Hahnemann's 1796 founding of homeopathy, NHS's 2017 and France's 2021 funding phase-outs, the 1938 FDCA homeopathic exemption)
 - **Chapter 15** — The Open Question ⏳ NOT YET WRITTEN
 - **Chapter 16** — The Water That Was Always There ⏳ NOT YET WRITTEN
 
